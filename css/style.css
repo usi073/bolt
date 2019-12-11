@@ -1,8 +1,14 @@
 body {
   position: relative;
   width: 100%;
+  font-family: 'Lato';
   color: #333;
+  font-size: 20px;
   background-color: #f2f2f2;
+}
+
+.t-font {
+  font-family: 'Raleway',sans-serif;
 }
 
 .header {
@@ -31,7 +37,7 @@ body {
   float: left;
 }
 
-.contact {
+.contact-pc {
   font-size: 12px;
   padding: 14px 12px;
   float: right;
@@ -41,7 +47,7 @@ body {
   transition: all 0.3s;
 }
 
-.contact:hover {
+.contact-pc:hover {
   color: #333;
 }
 
@@ -54,11 +60,14 @@ body {
 }
 
 .bolt-theme {
-  margin: 20px;
   color: #74cfae;
   font-size: 90px;
   font-weight: 700;
   text-align: center;
+}
+
+.subtitle {
+ margin-top: 20px;
 }
 
 .concept {
@@ -69,6 +78,7 @@ body {
 
 .concept-flex {
   display: flex;
+  justify-content: space-around;
 }
 
 .concept-photo {
@@ -77,25 +87,26 @@ body {
 }
 
 .what-we-can-do {
-  font-family: 'Raleway',sans-serif;
-  margin: 35px;
   font-size: 24px;
   color: #fff;
 }
 
 .concept-inner {
-  margin: 35px;
+  width: 70%;
+  padding-top: 20px;
+}
+  
+
+.concept-text {
+  margin-top: 35px;
 }
 
 .work {
-  padding-top: 60px;
-  padding-bottom: 70px;
-  font-size: 12px;
+  padding: 60px 0 70px;
 }
 
 .our-latest-work {
-  font-family: 'Raleway',sans-serif;
-  margin: 40px;
+  margin-bottom: 40px;
   font-size: 24px;
 }  
 
@@ -108,7 +119,7 @@ body {
   margin-left: 0;
 }
 
-.work-img:nth-child(4n) {
+.work-img:nth-child(3n+1) {
   margin-left: 0;
 }
 
@@ -117,8 +128,7 @@ body {
 }
 
 .work-img {
-  margin-left: 100px;
-  margin-top: 80px;
+  margin: 80px 0 0 100px;
   opacity: 0.7;
   transition: all 0.3s;
 }
@@ -128,6 +138,7 @@ body {
 }
 
 .email {
+  display: inline-block;
   padding: 14px 20px;
   margin-left: 90px;
   font-size: 12px;
@@ -144,16 +155,16 @@ body {
 .work-inner {
   display: flex;
   justify-content: center;
-  margin-right: 90px;
-  padding-top: 90px;
+  margin-top: 90px;
+  align-items: flex-start;
 }
 
-.work-inner:last-child {
-  margin-right: 0;
+.work-text {
+  width: 50%;
 }
 
 .skills {
-  padding: 70px 0;
+  padding: 70px 0 100px;
   background-color: #4e4e4e;
 }
 
@@ -165,9 +176,7 @@ body {
 
 .circle-img {
   display: flex;
-  margin: 0 auto;
-  padding-top: 50px;
-  padding-bottom: 100px;
+  margin-top: 50px;
   justify-content: center;
 }
 
@@ -207,8 +216,7 @@ body {
 
 .footer {
   width: auto;
-  padding-top: 20px;
-  padding-bottom: 25px;
+  padding: 20px 0 25px;
   font-size: 12px;
   color: #fff;
   background-color: #74cfae;
@@ -217,3 +225,110 @@ body {
 .footer-inner {
   text-align: right;
 }
+
+
+@media screen and (min-width: 1200px) { 
+  .contact-sp {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .inner {
+    width: 97%;
+  } 
+
+  .contact-sp {
+    display: none;
+  }
+
+  .concept-flex {
+    display: block;
+  }
+
+  .concept {
+    padding: 50px 0 25px;
+  }
+
+  .concept-inner {
+    width: auto;
+  }
+
+  .work-images {
+    flex-direction: column;
+  }
+
+  .work-img {
+    margin: 0;
+  }
+
+  .work-img:nth-child(3n) {
+    margin-bottom: 80px;
+  }
+
+  .work-inner {
+    display: block;
+    margin: 0;
+  }
+
+  .work-text {
+    width: 100%;
+  }
+
+  .email {
+    margin: 40px 0 0;
+  }
+
+  .circle-img {
+    display: block;
+  }
+  .circle {
+    margin: 0 0 88px;
+  }
+
+  .circle:last-child {
+    margin: 0;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .contact-pc {
+    display: none;
+  }
+
+  .contact-sp {
+    display: block;
+    float: right;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .bar {
+    color: #ddd;
+  }
+
+  .title {
+    padding: 160px 0 130px;
+  }
+  
+  .bolt-theme {
+    font-size: 80px;
+  }
+  
+  .sns {
+    padding: 50px 0;
+  }
+
+  .sns-icons {
+    display: block;
+  }
+
+  .snsicon {
+    width: 100%;
+  }
+
+}
+
+
